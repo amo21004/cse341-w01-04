@@ -20,5 +20,7 @@ const controllers = require('./controllers/index');
 const routes = require('./routes/index');
 
 routes.forEach(route => {
-    app.get(route, controllers[route]);
+    const method = controllers[route]['method'];
+
+    app[method](route, controllers[route]['execute']);
 });
