@@ -6,8 +6,7 @@ require('dotenv').config();
 
 const db = require('./services/connection')(process.env.MONGO_URI.replace('dbname', 'wdd431'));
 
-// Assign db to express so that it can be accessed from other places in the application (for example, inside a controller)
-app.set('db', db);
+const url = require('url');
 
 const port = process.env.PORT || 3000;
 
@@ -15,8 +14,13 @@ app.listen(port);
 
 const routes = require('./routes/index');
 
-routes.forEach(route => {
-    const method = controllers[route]['method'];
+for (const route in routes) {
+    const method = routes[route].method;
 
-    app[method](route, controllers[route]['execute']);
-});
+    // sample extrapolation: app['get'].('/contacts', the_contacts_endpoint_controller({db, url}))
+    app[method](route, routes[route].execute({
+        // injecting dependencies
+        'db': db,
+        'url': url
+    }));
+}
