@@ -1,5 +1,7 @@
-module.exports = function (uri, mc) {
-    const client = new mc(uri);
+const { MongoClient } = require('mongodb');
+
+module.exports = function (uri) {
+    const client = new MongoClient(uri);
 
     const dbo = client.db('wdd431');
 
