@@ -1,0 +1,7 @@
+http://localhost:3000/contacts
+
+http://localhost:3000/contacts/63221b15b6df9ce81c0b638d
+
+https://naifcse341.onrender.com/contacts
+
+https://naifcse341.onrender.com/contacts/63221b15b6df9ce81c0b638d
