@@ -4,7 +4,9 @@ const app = express();
 
 require('dotenv').config();
 
-const [db, objectId] = require('./services/connection')(process.env.MONGO_URI.replace('dbname', 'wdd431'));
+const { MongoClient } = require('mongodb');
+
+const [db, objectId] = require('./services/connection')(process.env.MONGO_URI.replace('dbname', 'wdd431'), MongoClient);
 
 const url = require('url');
 
