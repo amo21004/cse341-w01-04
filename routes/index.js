@@ -6,5 +6,9 @@ module.exports = {
     '/contacts': {
         method: 'get',
         execute: require('../controllers/contacts')
+    },
+    '/contacts/*': {
+        method: 'get',
+        execute: require('../controllers/contacts_single')
     }
 }

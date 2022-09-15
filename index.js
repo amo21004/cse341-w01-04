@@ -4,7 +4,7 @@ const app = express();
 
 require('dotenv').config();
 
-const db = require('./services/connection')(process.env.MONGO_URI.replace('dbname', 'wdd431'));
+const [db, objectId] = require('./services/connection')(process.env.MONGO_URI.replace('dbname', 'wdd431'));
 
 const url = require('url');
 
@@ -21,6 +21,7 @@ for (const route in routes) {
     app[method](route, routes[route].execute({
         // injecting dependencies
         'db': db,
-        'url': url
+        'url': url,
+        'objectId': objectId
     }));
 }

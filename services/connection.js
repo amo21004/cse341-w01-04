@@ -5,5 +5,5 @@ module.exports = function (uri) {
 
     const dbo = client.db('wdd431');
 
-    return dbo;
+    return [dbo, require('mongodb').ObjectId];
 }
