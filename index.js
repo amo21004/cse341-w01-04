@@ -13,10 +13,6 @@ const port = process.env.PORT || 3000;
 
 app.listen(port);
 
-// Get all of the controller functions
-const controllers = require('./controllers/index');
-
-// Get all of the routes
 const routes = require('./routes/index');
 
 routes.forEach(route => {
