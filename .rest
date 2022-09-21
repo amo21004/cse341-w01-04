@@ -1,7 +1,19 @@
-http://localhost:3000/contacts
+GET http://localhost:3000/contacts HTTP/1.1
 
-http://localhost:3000/contacts/63221b15b6df9ce81c0b638d
+GET http://localhost:3000/contacts/632a004d9205c26f2b4d50d8 HTTP/1.1
 
-https://naifcse341.onrender.com/contacts
+POST http://localhost:3000/contacts HTTP/1.1
 
-https://naifcse341.onrender.com/contacts/63221b15b6df9ce81c0b638d
+PUT http://localhost:3000/contacts/632a0aa66fb797661375f88a HTTP/1.1
+
+DELETE http://localhost:3000/contacts/632a0acc825924792b0b095a HTTP/1.1
+
+GET https://naifcse341.onrender.com/contacts HTTP/1.1
+
+GET https://naifcse341.onrender.com/contacts/632a004d9205c26f2b4d50d8 HTTP/1.1
+
+POST https://naifcse341.onrender.com/contacts HTTP/1.1
+
+PUT https://naifcse341.onrender.com/contacts/632a0ae2bf84a4e8ac428adb HTTP/1.1
+
+DELETE https://naifcse341.onrender.com/contacts/632a0ae2bf84a4e8ac428adb HTTP/1.1

@@ -4,11 +4,11 @@ module.exports = {
         execute: require('../controllers/home')
     },
     '/contacts': {
-        method: 'get',
+        method: ['get', 'post'],
         execute: require('../controllers/contacts')
     },
-    '/contacts/*': {
-        method: 'get',
+    '/contacts/:contact_id': {
+        method: ['get', 'put', 'delete'],
         execute: require('../controllers/contacts_single')
     }
-}
+};
