@@ -1,11 +1,25 @@
+# GET request that gets list of all contacts
 GET http://localhost:3000/contacts HTTP/1.1
 
+# GET request that gets a contact with ID 632a004d9205c26f2b4d50d8
 GET http://localhost:3000/contacts/632a004d9205c26f2b4d50d8 HTTP/1.1
 
-POST http://localhost:3000/contacts HTTP/1.1
+# POT request that adds a new contact
+# Format expected:
+# {
+#     "firstName": "Ninja",
+#     "lastName": "Amoodi",
+#     "email": "ninjaamoodi@gmail.com",
+#     "favoriteColor": "Green",
+#     "birthday": "11/11/2021"
+}
+# POST http://localhost:3000/contacts HTTP/1.1
 
+# PUT request that updates an existing contact with ID 632a0aa66fb797661375f88a
+# Format expected is more or less like the POST request
 PUT http://localhost:3000/contacts/632a0aa66fb797661375f88a HTTP/1.1
 
+# DELETE request that deletes an existing contact with ID 632a0aa66fb797661375f88a
 DELETE http://localhost:3000/contacts/632a0acc825924792b0b095a HTTP/1.1
 
 GET https://naifcse341.onrender.com/contacts HTTP/1.1
