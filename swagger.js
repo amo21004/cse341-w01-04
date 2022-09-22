@@ -1,14 +1,14 @@
 const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
-    info: {
-      title: 'Contacts Project',
-      description: 'This is the contacts project',
-    },
-    host: 'localhost:3000',
-    schemes: ['http'],
+  info: {
+    title: 'Contacts Project',
+    description: 'This is the contacts project',
+  },
+  host: 'naifcse341.onrender.com',
+  schemes: ['https'],
 };
-  
+
 const outputFile = './swagger.json';
 
 const endpointsFiles = ['./routes/index.js'];
